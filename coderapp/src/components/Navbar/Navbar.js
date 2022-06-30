@@ -1,5 +1,6 @@
 import React from 'react'
-import { CartWidget } from './CartWidget'
+import { CartWidget } from '../CartWidget/CartWidget'
+
 
 
 export const Navbar = () => {
@@ -18,7 +19,7 @@ export const Navbar = () => {
                         <a className="nav-link text-white" href="#">Formas de pago</a>
                         <a className="nav-link text-white" href="#">Contacto</a>
                     </div>
-                    <CartWidget/>
+                    <CartWidget count={6}/>
                 </div>
             </div>
         </nav>
