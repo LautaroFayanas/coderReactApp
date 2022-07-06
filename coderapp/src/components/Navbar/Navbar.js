@@ -19,7 +19,7 @@ export const Navbar = () => {
                         <a className="nav-link text-white" href="#">Formas de pago</a>
                         <a className="nav-link text-white" href="#">Contacto</a>
                     </div>
-                    <CartWidget count={6}/>
+                    <CartWidget count={1}/>
                 </div>
             </div>
         </nav>

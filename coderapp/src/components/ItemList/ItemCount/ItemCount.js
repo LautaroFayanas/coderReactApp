@@ -18,7 +18,7 @@ export const ItemCount = ({stock, initial , onAdd}) => {
 
   return (
     <>
-        <h1 className ='mt-5 text-danger bg-dark rounded-5 w-100 '> {counter} </h1>
+        <p className ='mt-5 text-danger bg-dark rounded-5 w-100 '> {counter} </p>
         <button className='btn btn-dark m-2' onClick={decremetar}>-1</button>
         <button className='btn btn-dark m-2' onClick={()=>{
             if(counter <= stock){
