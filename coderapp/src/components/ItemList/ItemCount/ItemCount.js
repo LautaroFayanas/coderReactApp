@@ -10,7 +10,7 @@ export const ItemCount = ({stock, initial , onAdd}) => {
         alert('No hay mas stock de este producto')
        }
     }
-
+    
     const decremetar = () =>{
         setcounter((valor) => (valor > 0 ? counter -1: counter))
     }

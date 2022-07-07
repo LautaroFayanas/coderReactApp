@@ -54,7 +54,6 @@ const products = [
 
 const getData = new Promise((resolve, reject) => {
     let afterPromises = true;
-    // let afterPromises = false;
     setTimeout(() => {
       if (afterPromises) {
         resolve(products);
