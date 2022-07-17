@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export const Item = ({product}) => {
   const { image, tittle, price ,description,category,id } = product;
@@ -12,7 +11,7 @@ export const Item = ({product}) => {
           <h1 className='h2 shadow-lg'>{tittle} </h1>
           <p className='text-success'>${price} </p>
           <p className='h5'>{description} </p>
-          <Link to={"Producto/" + tittle} className='h5 text-danger'>Categoria: <strong> {category} </strong>  </Link>
+          <p to={"Producto/" + tittle} className='h5 text-danger'>Categoria: <strong> {category} </strong>  </p>
         </div>
       </div>
     </div>

@@ -1,4 +1,9 @@
+.imageD{
+    width: 100px;
+    height: 140px;
+    
+}
 
-.card{
-   width: 25rem;
+.cardD{
+    height: 500px;
 }

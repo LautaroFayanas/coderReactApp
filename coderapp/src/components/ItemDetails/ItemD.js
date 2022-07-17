@@ -1,28 +1,28 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './itemD.css'
 
-export const ItemD = ({ detail }) => {
-    
-    const { title, id, description, price, stock, images } = detail;
+export const ItemD = ({ id, title, image, description, price }) => {
+
+
 
     return (
 
 
-        <div className=' container text-center mb-5 col-lg-4'> 
-        <div className='card rounded-5 m-auto shadow-lg pb-2' >
-            <img className='rounded-5 ' src={images} alt={title} />
-            <p className='h5 m-2'>{id} </p>
-            <h1 className='h2'> New <strong> {title} </strong>  </h1>
-            <hr />
-            <p className='h4'>-{description}-</p>
-            <hr />
-            <div className='d-flex m-auto p-2'> 
-                <p className='h1 text-success'>${price}</p>   
-                <p className='h5 mx-3 pt-1 text-center'>Stock: {stock} </p>
+        <div className="container col-lg-4 mt-5 text-dark ">
+            <div className="text-center card-box d-flex justify-content-around">
+                <div className="card p-3 rounded-5 shadow-lg m-5 ">
+                    <img className='m-auto rounded-5 imageD' src={image} alt={title} />
+                    <p className='h5 m-3'>{id} </p>
+                    <h1 className='h2 shadow-lg'>{title.slice(0, 10)} </h1>
+                    <p className='text-success h3'>${price} </p>
+                    <p  className='h5'>  {description.slice(0, 48)} </p>
+                    <Link to={'detail/' + id} className="btn btn-dark w-50 m-auto rounded-5">View</Link>
+                </div>
             </div>
-            <a href="#" className="btn btn-dark w-50 m-auto rounded-5">View</a>
         </div>
-        </div>
+
     )
 }
+
 

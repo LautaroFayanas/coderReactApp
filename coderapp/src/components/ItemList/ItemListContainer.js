@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ItemCount } from './ItemCount/ItemCount';
-import getData from '../../mock/products'; 
 import { Itemlist } from './items/Itemlist';
+import getData from '../../mock/products'; 
 
 
 

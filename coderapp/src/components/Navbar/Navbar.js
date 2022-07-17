@@ -14,7 +14,7 @@ export const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div className="navbar-nav ">
-                    <NavLink className={'text-decoration-none p-2 text-white'} to="/Tienda">Tienda</NavLink>
+                    <NavLink className={'text-decoration-none p-2 text-white'} to="/Tienda"> Tienda </NavLink>
                     <NavLink className={'text-decoration-none p-2 text-white'} to="/Formasdepago">Formas de pago</NavLink>
                     <NavLink className={'text-decoration-none p-2 text-white'} to="/Contacto">Contacto</NavLink>
                     </div>

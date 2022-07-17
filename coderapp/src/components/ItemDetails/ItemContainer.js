@@ -1,32 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import detalleData from '../../mock/detailsProduct';
-import { ItemListDetail } from './ItemListDetail';
+import ItemList from './ItemList';
 
 export const ItemContainer = () => {
 
-  const [detail, setDetail] = useState([]);
-    
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
-   
-   const getItem = async() =>{
-    try{
-      const obtenerData = await detalleData;
-      setDetail(obtenerData)
-    }catch(error){
-      console.log(error)
-    }}
-
-   getItem();
-
-  }, []);
-
-
-
-  return (
-  
-      <h1>
-          <ItemListDetail  detail={detail} />
-      </h1>
     
+      fetch('https://fakestoreapi.com/products/')
+        .then((res) => res.json())
+        .then(data => {
+          setProducts(data)
+          }
+        )
+   
+  }, [])
+  
+  return (
+    <div>
+      <ItemList products={products} />
+    </div>
   )
 }
