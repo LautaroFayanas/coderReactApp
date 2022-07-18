@@ -12,22 +12,22 @@ export const ItemCount = ({stock, initial , onAdd}) => {
     }
     
     const decremetar = () =>{
-        setcounter((valor) => (valor > 0 ? counter -1: counter))
+        setcounter((valor) => (valor > 1 ? counter -1: counter))
     }
 
 
   return (
     <>
-        <p className ='mt-5 text-danger bg-dark rounded-5 w-100 '> {counter} </p>
-        <button className='btn btn-dark m-2' onClick={decremetar}>-1</button>
-        <button className='btn btn-dark m-2' onClick={()=>{
+        <p className ='mt-3 p-2 mb-3 text-white bg-dark rounded-5 w-50 m-auto '> {counter} </p>
+        <button className='btn btn-dark m-1' onClick={decremetar}>-</button>
+        <button className='btn btn-dark m-1' onClick={()=>{
             if(counter <= stock){
                 onAdd(counter);
             }
         }}>
-            Agregar
+            Añadir al carrito
         </button>
-        <button className='btn btn-dark m-2' onClick={incrementar}> +1 </button> 
+        <button className='btn btn-dark m-1' onClick={incrementar}> + </button> 
     </>
   )
 }
