@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { ItemCount } from '../components/ItemList/ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import { Navbar } from '../components/Navbar/Navbar'
 
 export const Detail = () => {
 
@@ -29,6 +30,7 @@ export const Detail = () => {
    
   return (
     <> 
+    {<Navbar />}
     <div className="container col-lg-4 mt-5 text-dark">
       <div className="text-center card-box d-flex">
         <div className="card p-3 rounded-5 shadow-lg ">
@@ -42,7 +44,7 @@ export const Detail = () => {
             { add ? <p className='h2 m-2 text-success'> Añadido!  </p> : <ItemCount stock={5} initial={1} onAdd={AddToCart} /> }
 
            </div> 
-           <Link to="/Cart">
+           <Link to= {products.id +'/cart'}>
                 <button className='btn btn-success w-100 m-auto mt-3'> Finalizar Compra </button> 
            </Link>
         </div>

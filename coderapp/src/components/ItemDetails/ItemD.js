@@ -9,8 +9,8 @@ export const ItemD = ({ id, title, image, description, price }) => {
     return (
 
 
-        <div className="container col-lg-4 mt-5 text-dark ">
-            <div className="text-center card-box d-flex justify-content-around">
+        <div className="container col-lg-4  text-dark ">
+            <div className="text-center card-box ">
                 <div className="card p-3 rounded-5 shadow-lg m-5 ">
                     <img className='m-auto rounded-5 imageD' src={image} alt={title} />
                     <p className='h5 m-3'>{id} </p>
