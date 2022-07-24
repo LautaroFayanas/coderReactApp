@@ -39,11 +39,11 @@ export const Detail = () => {
             <h1 className='h2 shadow-lg'>{products.title} </h1>
             <p className='text-success h2 m-4'>${products.price} </p>
             <p className='h5 mt-2'>{products.description} </p>
-            <div >
-          
-              { <ItemCount item={products} stock={5} initial={1} addItem={addItem} /> }
-             
+            <div>  { 
+                  <ItemCount item={products} stock={5} initial={1} addItem={addItem} /> 
+                   }  
             </div>
+
             <Link to={'/cart'}>
               <button className='btn btn-success w-100 m-auto mt-3'> Finalizar Compra </button>
             </Link>
