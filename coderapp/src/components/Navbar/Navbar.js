@@ -15,7 +15,6 @@ export const Navbar = () => {
                     <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
                         <div className="navbar-nav ">
                             <NavLink className={'text-decoration-none p-2 text-white'} to="/Tienda"> Tienda </NavLink>
-                            <NavLink className={'text-decoration-none p-2 text-white'} to="/Formasdepago">Formas de pago</NavLink>
                             <NavLink className={'text-decoration-none p-2 text-white'} to="/Contacto">Contacto</NavLink>
                         </div>
                         <CartWidget count={1} />
@@ -29,8 +28,8 @@ export const Navbar = () => {
                     <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/women's clothing">Mujeres</NavLink>
                 </div>
 
-                
-            <Outlet />
+                <Outlet/>
+            
         </>
     )
 }

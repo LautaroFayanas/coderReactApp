@@ -3,16 +3,11 @@
 }
 
 
-.count{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.counterStyleCart{
+
     position: absolute;
     width: 18px;
-    height: 20px;
-    top:0%;
-    right: 0%;
-    border-radius: 40%;
+    margin: -6px 20px;
 }
 
 .imgCart{

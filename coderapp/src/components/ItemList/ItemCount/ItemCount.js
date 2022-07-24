@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export const ItemCount = ({stock, initial , onAdd}) => {
+export const ItemCount = ({item,stock, initial , addItem}) => {
 
     const [counter, setcounter] = useState(initial);
 
@@ -22,7 +22,7 @@ export const ItemCount = ({stock, initial , onAdd}) => {
         <button className='btn btn-dark m-1' onClick={decremetar}>-</button>
         <button className='btn btn-dark m-1' onClick={()=>{
             if(counter <= stock){
-                onAdd(counter);
+                addItem({item,counter});
             }
         }}>
             Añadir al carrito

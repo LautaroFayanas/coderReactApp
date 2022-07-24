@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ItemCount } from './ItemCount/ItemCount';
 import { Itemlist } from './items/Itemlist';
 import getData from '../../mock/products'; 
@@ -6,7 +6,11 @@ import getData from '../../mock/products';
 
 
 
+
 export const ItemListContainer = ({ greeting }) => {
+
+ 
+
 
   const [products, setProducts] = useState([]);
 

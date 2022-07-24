@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { Navbar } from '../Navbar/Navbar';
 import ItemList from './ItemList';
+import { Navbar } from '../Navbar/Navbar';
 
 export const ItemContainer = () => {
 
