@@ -13,35 +13,35 @@ export const Detail = () => {
 
   let params = useParams();
 
-  const [products, setProducts] = useState([]);
-
+  const [product, setProduct] = useState([]);
+ 
 
   useEffect(() => {
 
     fetch('https://fakestoreapi.com/products/' + params.id)
       .then((res) => res.json())
       .then(json => {
-        setProducts(json)
+        setProduct(json)
       })
 
   }, [params.id])
 
 
+
   return (
     <>
-      <Navbar />
-      
+    <Navbar />
       <div className="container m-auto row align-items-center mt-5 text-dark">
         <div className="text-center card-box d-flex col-lg-7">
-          <img className='m-auto rounded-5 w-50' src={products.image} alt={products.title} />
+          <img className='m-auto rounded-5 w-50' src={product.image} alt={product.title} />
           <div className="card p-3  rounded-5 w-100 shadow-lg col-lg-4 offset-lg-1">
-            <p className='h5 m-3'>{products.id} </p>
-            <h1 className='h2 shadow-lg'>{products.title} </h1>
-            <p className='text-success h2 m-4'>${products.price} </p>
-            <p className='h5 mt-2'>{products.description} </p>
+            <p className='h5 m-3'>{product.id} </p>
+            <h1 className='h2 shadow-lg'>{product.title} </h1>
+            <p className='text-success h2 m-4'>${product.price} </p>
+            <p className='h5 mt-2'>{product.description} </p>
             <div>  { 
-                  <ItemCount item={products} stock={5} initial={1} addItem={addItem} /> 
-                   }  
+                  <ItemCount item={product} stock={5} initial={1} addItem={addItem}  /> 
+                   }    
             </div>
 
             <Link to={'/cart'}>
@@ -50,7 +50,7 @@ export const Detail = () => {
           </div>
         </div>
       </div>
-
+        
     </>
   )
 }

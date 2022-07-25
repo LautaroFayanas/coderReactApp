@@ -1,7 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ItemContainer } from './components/ItemDetails/ItemContainer';
-import { ItemListContainer } from './components/ItemList/ItemListContainer';
 import { CartProvider } from './context/useContext';
 import { Cart } from './pages/Cart';
 import { Contacto } from './pages/Contacto';

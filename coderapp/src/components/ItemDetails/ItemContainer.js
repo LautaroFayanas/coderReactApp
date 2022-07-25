@@ -6,8 +6,8 @@ import { Navbar } from '../Navbar/Navbar';
 export const ItemContainer = () => {
 
   const {categoryID} = useParams();
-
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState({});
+  const [loading,setLoading] = useState(true);
 
   useEffect(() => {
     
@@ -22,7 +22,7 @@ export const ItemContainer = () => {
           }
           
           }
-        )
+        ).finally(() => setLoading(false))
    
   }, [categoryID])
   
@@ -30,7 +30,7 @@ export const ItemContainer = () => {
     <div>
       <Navbar />
       <hr className=''/>
-      <ItemList products={products} />
+     {loading? <p>Cargando...</p>: <ItemList products={products} />} 
     </div>
   )
 }

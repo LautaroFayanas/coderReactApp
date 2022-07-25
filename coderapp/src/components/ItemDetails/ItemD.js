@@ -4,8 +4,7 @@ import './itemD.css'
 
 export const ItemD = ({ id, title, image, description, price }) => {
 
-
-
+    
     return (
 
 

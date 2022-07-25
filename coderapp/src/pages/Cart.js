@@ -1,20 +1,23 @@
-import React, { useContext } from 'react'
+import React, { useContext} from 'react'
 import { CartContext } from '../context/useContext'
 import '../context/cssCart/cart.css'
 import { Navbar } from '../components/Navbar/Navbar'
+import { Link } from 'react-router-dom'
 
 export const Cart = () => {
 
   const { items , removeItem } = useContext(CartContext);
 
-
   return (
     <>
     <Navbar />
-    <p className='h4 m-5'>Mis Productos Agregados:</p>
+    
+    <p className='h4 m-5'>Mis Productos: 
+    {items == 0 ? <span className='p-4'> No tienes productos seleccionados <Link to={'/'}>Click Aqui</Link> para vovler a la tienda </span>  : null} </p>
+
 
       {items.map(({ item, counter }, index ) => {
-        
+  
         return (
           <div key={index} className="container m-auto align-items-center mt-5 text-dark mb-5">
             <div className="text-center m-auto d-flex w-100">
@@ -34,6 +37,7 @@ export const Cart = () => {
             </div>
           </div>
         )
+      
       })}
     </>
   )
