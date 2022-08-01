@@ -22,8 +22,8 @@ export const Navbar = () => {
                 </div>
             </nav>
                 <div className='m-auto w-100 text-center h5 p-4'>
-                    <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/men's clothing">Hombres</NavLink>|
-                    <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/jewelery">Joyas</NavLink>|
+                    <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/Zapatillas">Zapatillas</NavLink>|
+                    <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/Remeras">Remeras</NavLink>|
                     <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/electronics">Electronica</NavLink> |
                     <NavLink className={'text-decoration-none p-2 text-danger w-100 text-center'} to="/women's clothing">Mujeres</NavLink>
                 </div>

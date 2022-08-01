@@ -4,6 +4,7 @@ import imge from './img.png'
 import { CartContext } from '../../context/useContext'
 import { Link } from 'react-router-dom'
 
+
 export const CartWidget = () => {
 
   const { items } = useContext(CartContext);
@@ -11,11 +12,8 @@ export const CartWidget = () => {
   let itemsInCart = 0
 
     items.map((c) => {
-        itemsInCart = itemsInCart + c.counter;
+        itemsInCart = itemsInCart + c.counter ;
       })
-
-
-
 
   
   return (

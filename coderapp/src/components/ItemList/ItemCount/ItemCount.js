@@ -20,12 +20,7 @@ export const ItemCount = ({item,stock, initial , addItem}) => {
     <>
         <p className ='mt-3 p-2 mb-3 text-white bg-dark rounded-5 w-50 m-auto '> {counter} </p>
         <button className='btn btn-dark m-1' onClick={decremetar}>-</button>
-        <button className='btn btn-dark m-1' onClick={()=>{
-            
-            addItem({item,counter});
-
-            
-        }}>
+        <button className='btn btn-dark m-1' onClick={()=>{addItem({ item , counter})}}>
             Añadir al carrito
         </button>
         <button className='btn btn-dark m-1' onClick={incrementar}> + </button> 

@@ -21,17 +21,12 @@ export const Cart = () => {
         return (
           <div key={index} className="container m-auto align-items-center mt-5 text-dark mb-5">
             <div className="text-center m-auto d-flex w-100">
-            <p className='h5 m-5 text-success'>
-              Cantidad: 
-              <span className='px-2'>
-              {counter}
-              </span>
-            </p>
-              <img className='m-auto CartImg' src={item.image} alt={item.title} />
+              <img className='m-auto CartImg' src={item.url} alt={item.id} />
               <div className="rounded-5 shadow-lg w-50 ">
-                <h1 className='h5 shadow-lg'>{item.title} </h1>
-                <p className='text-success h2 m-4'>${item.price * counter} </p>
-                <p className='h5 mt-2'>Description: {item.description.slice(0, 50)} </p>
+                <h1 className='h5 shadow-lg'>{item.category} </h1>
+                <p className='text-success h2 m-4'>${item.Price * counter} </p>
+                <p className='text-success h5 m-4'>Cantidad: {counter}</p>
+                <p className='h5 mt-2'>Stock: {item.Stock} </p>
             <button onClick={() => removeItem(item.id)} className='m-5 text-danger btn-close'></button>
               </div>
             </div>
